@@ -31,6 +31,9 @@ app.use(cookieparser())
 //      useTempFiles : true,
 //     tempFileDir : '/tmp/'
 // }))
+if (!fs.existsSync("./public")) {
+    fs.mkdirSync("./public");
+}
 
 if(fs.existsSync("./public/images") || fs.mkdirSync("./public/images")){}
 
