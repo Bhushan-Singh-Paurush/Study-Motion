@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient{
+     background-image: radial-gradient(ellipse ,#537988, #000814 70%)
+}
+.cardshadow{
+     box-shadow: 10px 10px #E7C009;
+}
+.videoshadow{
+     box-shadow: 15px 15px white;
+}
+.FeaturesPointshadow{
+     box-shadow: 5px 5px 10px #AFB2BF, -5px -5px 10px #AFB2BF;
+}
+
+.spinner {
+   width: 11.2px;
+   height: 11.2px;
+   border-radius: 11.2px;
+   box-shadow: 28px 0px 0 0 rgba(71,75,255,0.2), 22.7px 16.5px 0 0 rgba(71,75,255,0.4), 8.68px 26.6px 0 0 rgba(71,75,255,0.6), -8.68px 26.6px 0 0 rgba(71,75,255,0.8), -22.7px 16.5px 0 0 #474bff;
+   animation: spinner-b87k6z 1s infinite linear;
+}
+
+@keyframes spinner-b87k6z {
+   to {
+      transform: rotate(360deg);
+   }
+}
+.orangegradient{
+     background: linear-gradient(45deg,#FF512F,#F09819);
+     background-clip: text;
+     color: transparent;
+}
+.yellowgradient{
+     background: linear-gradient(45deg,#E65C00,#F9D423);
+     background-clip: text;
+     color: transparent;
+}
+.redgradient{
+     background: linear-gradient(45deg,#833AB4,#FD1D1D,#FCB045);
+     background-clip: text;
+     color: transparent;
+}
+.pinkshadow{
+     box-shadow: 0px -10px 20px  #ec008e5b;
+}
+.borderRadius{
+     border-top-left-radius: 2px;
+     border-top-right-radius: 2px;
+}
+::-webkit-scrollbar{
+     width: 10px;
+     height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+          background-color: #2C333F;
+          border-radius: 4px;
+      
+}
+::-webkit-scrollbar-track {
+     background: #6E727F;
+     
+   
+   }
+   .mySwiper .swiper-pagination-bullet {
+     background-color: #ccc; /* Inactive circle color */
+   }
