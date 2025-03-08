@@ -47,10 +47,9 @@ app.use("/api1/rating",ratingRoutes)
 app.use("/api1/section",sectionRoutes)
 app.use("/api1/subsection",subsectionRoutes)
 
-app.listen(port,()=>{console.log(`Server is running at port ${port}`);
-})
 require("./Config/DbConnection").DbConnection()
 require("./Config/Cloudinary").cloudinary()
 
+module.exports=app
 
 
