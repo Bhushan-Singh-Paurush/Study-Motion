@@ -7,7 +7,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { BsFillTriangleFill } from "react-icons/bs";
 import { logout } from '../../services/Operation/authApi'
 import { getAllCategories } from '../../services/Operation/courseApi'
-
+import LogoSmallLight from "../../assets/Logo/Logo-Small-Light.png"
 export const Navbar = () => {
 const location=useLocation()
 const{totalItems}=useSelector((state)=>state.cart)
@@ -45,7 +45,7 @@ useEffect(()=>{
   return (
     <div className=' w-full border-b-[2px] border-richblack-700 font-inter'>
         <div className='py-2 mx-auto w-10/12 max-w-[1000px] flex justify-between items-center'>
-            <NavLink className="flex items-center gap-1" to={"/"}><img src='/src/assets/Logo/Logo-Small-Light.png'/><div className=' text-3xl text-white font-semibold font-inter'>StudyMotion</div></NavLink>
+            <NavLink className="flex items-center gap-1" to={"/"}><img src={LogoSmallLight}/><div className=' text-3xl text-white font-semibold font-inter'>StudyMotion</div></NavLink>
             
             <nav>
                <ul className='flex   gap-5'>

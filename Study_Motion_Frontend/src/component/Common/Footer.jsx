@@ -1,12 +1,11 @@
 import React from "react";
 import { footerLinks } from "../../data/footerLinks";
 import { NavLink } from "react-router-dom";
-import logoFullLight from "../../assets/Logo/Logo-Full-Light.png"
 import { FaFacebook } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io5";
-
+import LogoSmallLight from "../../assets/Logo/Logo-Small-Light.png"
 
 export const Footer = () => {
 
@@ -23,7 +22,7 @@ export const Footer = () => {
                         <div className=" flex flex-col gap-2">
 
                             {/* logo image */}
-                            <div className=" text-xl flex items-center gap-1 text-white"><img width={35} src='/src/assets/Logo/Logo-Small-Light.png'/><div className=' font-semibold font-inter'>StudyMotion</div></div>
+                            <div className=" text-xl flex items-center gap-1 text-white"><img width={35} src={LogoSmallLight}/><div className=' font-semibold font-inter'>StudyMotion</div></div>
 
                             {/* first */}
                             <div>{Array(footerLinks[0]).map((value, index) => (
