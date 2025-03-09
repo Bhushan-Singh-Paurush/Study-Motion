@@ -28,15 +28,15 @@ export const CardSection = () => {
         
         <div className=' text-4xl text-white font-inter text-center'>Unlock the <HighlightedText>Power of Code</HighlightedText> </div>
         
-        <div className=' flex my-10 gap-5  bg-richblack-800 px-2 text-lg py-1 rounded-full w-fit mx-auto '>{tags.map((item,index)=>(
+        <div className=' flex my-10 gap-5  bg-richblack-800 px-2 text-sm md:text-lg py-1 rounded-full w-fit mx-auto '>{tags.map((item,index)=>(
             <div key={index} 
-            className={`${item == currenttag ? " text-white bg-richblack-900 px-2 rounded-2xl" : " text-richblack-100"} transition-all duration-200 cursor-pointer`}
+            className={`${item == currenttag ? " text-white bg-richblack-900 px-2 rounded-2xl" : " text-richblack-100"} flex items-center justify-center transition-all duration-200 cursor-pointer`}
             onClick={()=>(ChangeCard(item))}>
             {item}
             </div>
         ))}</div>
 
-        <div className='flex absolute gap-10 mx-auto transition-all duration-300'>{carddata[0].courses.map((item,index)=>(
+        <div className='flex flex-col md:flex-row absolute gap-10 mx-auto transition-all duration-300'>{carddata[0].courses.map((item,index)=>(
             <Card key={index} index={index} item={item}/>
         ))}</div>
        

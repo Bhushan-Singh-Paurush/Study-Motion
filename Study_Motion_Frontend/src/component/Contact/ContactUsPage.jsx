@@ -10,8 +10,8 @@ import { Footer } from '../Common/Footer'
 export const ContactUsPage = () => {
   return (
     <>
-    <div className='mx-auto my-20 w-10/12 max-w-[1000px] flex gap-10 items-start font-inter'>
-        <div className=' flex flex-col gap-5 bg-richblack-700 w-[40%]  p-10 rounded-md'>{contactDetails.map((item,index)=>{
+    <div className='mx-auto my-20 w-11/12 max-w-[1000px] flex flex-col md:flex-row gap-10 items-start font-inter'>
+        <div className=' flex flex-col gap-5 bg-richblack-700 w-full md:w-[40%]  p-10 rounded-md'>{contactDetails.map((item,index)=>{
             let Icon=Icon1[item.icon] || Icon2[item.icon] || Icon3[item.icon] 
          
             return (<div key={index}>

@@ -27,7 +27,7 @@ const Cart = createSlice({
         else{
           state.cart.push(course)
           state.totalItems++
-          state.totalAmount+=course.price
+          state.totalAmount+=parseInt(course.price)
 
           localStorage.setItem("cart",JSON.stringify(state.cart))
           localStorage.setItem("totalItems",JSON.stringify(state.totalItems))

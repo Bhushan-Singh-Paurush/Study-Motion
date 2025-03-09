@@ -184,6 +184,14 @@ exports.getCourseDetail=async(req,res)=>{
                 message:`This course not found`
             })
         }
+
+        let totalCourseDuration=0
+        for(let section of courseDetail.courseContent)   
+            {
+            totalCourseDuration+=section.subSection.reduce((acc,cur)=>acc + parseInt(cur.timeDuration) , 0) 
+            }
+            courseDetail.totalCourseDuration=totalCourseDuration
+    
         return res.status(200).json({
             success:true,
             message:"that's all course detail",

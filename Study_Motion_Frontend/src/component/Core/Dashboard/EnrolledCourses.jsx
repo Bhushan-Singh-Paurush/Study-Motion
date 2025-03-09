@@ -70,31 +70,31 @@ const deleteEnrollCourseHandler=async(courseId)=>{
           <div>No data Found</div>
         ) : (
           <div className=" border-[2px] border-richblack-700 rounded-md ">
-            <div className=" text-richblack-100 bg-richblack-700 p-2 flex w-full items-center justify-between">
-              <div className="pl-2 w-[50%]">Course Name</div>
-              <div className="pl-2 w-[20%]">Durations</div>
-              <div className="pl-2 w-[20%]">Progress</div>
+            <div className=" text-richblack-100 bg-richblack-700 p-2 flex flex-wrap md:flex-nowrap w-full items-center justify-between">
+              <div className="pl-2 w-full md:w-[50%]">Course Name</div>
+              <div className="md:w-[20%]">Durations</div>
+              <div className="md:w-[20%]">Progress</div>
               <div></div>
             </div>
             <div>
               {courses.map((item, index) => (
                 <div key={index}
-                  className={`flex w-full items-center p-2  justify-between text-sm text-richblack-50 ${
+                  className={`flex flex-col md:flex-row gap-2 md:gap-0 w-full items-center p-2  justify-between text-sm text-richblack-50 ${
                     index < item.length ?
                     "border-b-[1px] border-richblack-100" : "border-b-[2px] border-richblack-700" 
                   }`}
                 >
-                  <div className="w-[50%] flex items-start p-2 gap-2 ">
+                  <div className="w-full md:w-[50%] flex items-start p-2 gap-2 ">
                     <img className=" w-[60px] aspect-square rounded-sm" src={item.thumbnail}/>
                     <div className=" flex flex-col w-full">
                       <NavLink to={`/view-course/${item?._id}/section/${item?.courseContent?.[0]?._id}/sub-section/${item?.courseContent?.[0]?.subSection?.[0]?._id}`}>{item.courseName}</NavLink>
                       <div className=" text-richblack-500 hover:cursor-pointer w-full" onClick={()=>Handler(item._id)}>{showDescription?.includes(item._id) ? item.description : "Show Description"}</div>
                     </div>
                   </div>
-                  <div className="p-2 flex w-[20%]">
+                  <div className="p-2 flex w-full md:w-[20%]">
                   <TimeDuration time={item.totalCourseDuration}/>
                   </div>
-                  <div className="p-1 w-[20%] flex flex-col items-start gap-1">
+                  <div className="p-1 w-full md:w-[20%] flex flex-col items-start gap-1">
                     <div>Progress {item.progress}%</div>
                     <Line
                       percent={parseInt(item.progress)}
@@ -106,9 +106,9 @@ const deleteEnrollCourseHandler=async(courseId)=>{
                   
                     />
                   </div>
-                  <div className=" relative">
+                  <div className=" relative w-full md:w-fit">
                   <button onClick={()=>setSettingbar(settingbar.includes(item._id) ? settingbar.filter(pre=>pre!==item._id) : (pre)=>[...pre,item._id])}  className=" text-lg"><BsThreeDotsVertical/></button>
-                {settingbar.includes(item._id) &&  <div className=" absolute right-0 flex flex-col gap-2 p-2 bg-richblack-700 rounded-md border-[1px] border-richblack-600">
+                {settingbar.includes(item._id) &&  <div className=" absolute left-0 md:right-0 flex flex-col gap-2 p-2 bg-richblack-700 rounded-md border-[1px] border-richblack-600">
                     <button onClick={()=>setConfirmationModal({
                       heading:"Permanently remove this course from your list",
                       subheading:"Are you sure you want to delete this course? This action cannot be undone.",

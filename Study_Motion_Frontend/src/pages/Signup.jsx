@@ -10,7 +10,8 @@ export const Signup = () => {
     let type="signup"
     return (
    <Template heading={heading} disp1={disp1} disp2={disp2} byt={byt} image={signup} type={type}/>
-    )
+    
+)
   
 }
 

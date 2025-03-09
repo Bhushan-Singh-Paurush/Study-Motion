@@ -17,7 +17,7 @@ export const Home = () => {
     <>
     
       {/* section 1 */}
-      <div id="herosection" className=" w-10/12 max-w-[1000px] mx-auto mt-20 flex flex-col gap-5 items-center">
+      <div id="herosection" className=" w-11/12 max-w-[1000px] mx-auto mt-20 flex flex-col gap-5 items-center">
         {/* become a instructor */}
         <NavLink to={"/signup"}>
           <div className=" font-inter bg-richblack-600 text-richblack-100 px-4 text-xl py-1 rounded-2xl w-fit border-b-2 hover:scale-95 transition-all duration-200 border-r-2">
@@ -44,7 +44,7 @@ export const Home = () => {
         </div>
 
         {/* video and gradient */}
-        <div className="relative w-[90%] h-[400px] gradient">
+        <div className="relative w-[90%] h-[200px] md:mb-20 sm:h-[300px] md:h-[400px] gradient">
           <video
             className="videoshadow mx-auto mt-12"
             autoPlay
@@ -112,8 +112,8 @@ export const Home = () => {
       </div>
 
       {/* section 2 */}
-      <div className="w-full bg-white h-[300px] bg-[url('src/assets/Images/bghome.svg')] flex items-center ">
-        <div className=" flex mt-36 mx-auto gap-10">
+      <div className="w-full bg-white h-[700px] md:h-[300px] bg-[url('src/assets/Images/bghome.svg')] flex items-center ">
+        <div className=" flex mt-[600px] md:mt-32 mx-auto gap-10">
           <CTAbutton
             text={"Explore Full Catalog"}
             active={true}
@@ -125,7 +125,7 @@ export const Home = () => {
 
       {/* section 3 */}
       <div className=" w-full bg-white flex flex-col items-center justify-center">
-        <div className="my-20 flex justify-between gap-20 w-10/12 max-w-[1000px]">
+        <div className="my-10 md:my-20 flex flex-col md:flex-row justify-between gap-10 md:gap-20 w-10/12 max-w-[1000px]">
           <div className=" text-3xl">
             Get the skills you need for a{" "}
             <HighlightedText>that is in demand.</HighlightedText>
@@ -150,7 +150,7 @@ export const Home = () => {
               Your swiss knife for{" "}
               <HighlightedText>learning any language</HighlightedText>
             </div>
-            <p className=" w-[80%] mx-auto">
+            <p className="w-full md:w-[80%] mx-auto">
               Using spin making learning multiple languages easy. with 20+
               languages realistic voice-over, progress tracking, custom schedule
               and more.
@@ -171,12 +171,12 @@ export const Home = () => {
       {/* section 5 */}
       <div className=" mx-auto w-10/12 max-w-[1200px] flex flex-col gap-20   my-20">
         {/* section 1 */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-between">
           {/* left section */}
-          <img width={400} src={Instructor} />
+          <img src={Instructor} className="w-full md:w-[400px] order-2  md:order-1" />
 
           {/* right section */}
-          <div className=" flex flex-col w-[400px] gap-5">
+          <div className=" flex flex-col w-full md:w-[400px] gap-5 order-1 md:order-2">
             <div className=" text-3xl text-white">
               Become an <HighlightedText>instructor</HighlightedText>
             </div>

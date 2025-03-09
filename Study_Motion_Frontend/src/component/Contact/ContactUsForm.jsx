@@ -20,9 +20,9 @@ export const ContactUsForm = () => {
     setValue("countryCode","+91 India")
   },[])
   return (
-    <div>
+    <div className="w-full md:w-fit">
       <form className=" flex flex-col gap-5" onSubmit={handleSubmit(submitContactForm)}>
-        <div className="flex gap-5">
+        <div className="flex md:flex-row flex-col gap-5">
           <label className="flex flex-col">
             <span className=" text-richblack-100 text-sm">First Name</span>
             <input

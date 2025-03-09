@@ -8,7 +8,7 @@ import { FeaturePoint } from './FeaturePoint'
 import TimelineImage from "../../assets/Images/TimelineImage.png"
 export const TimeLine = () => {
   return (
-    <div className=' w-10/12 max-w-[1000px] my-20 flex justify-between items-center'>
+    <div className='w-11/12 max-w-[1000px] my-5 md:my-20 flex flex-col gap-10 md:gap-0 md:flex-row justify-between md:items-center'>
       {/* left section */}
       <div>
         <FeaturePoint 
@@ -37,9 +37,9 @@ export const TimeLine = () => {
       </div>
 
       {/* right section */}
-      <div className='w-[50%] shadow-2xl relative  font-inter'>
+      <div className='w-full md:w-[50%] shadow-2xl relative font-inter'>
         <img  src={TimelineImage}/>
-        <div className=' text-richblack-25 text-3xl gap-5 p-4 flex absolute -bottom-9 right-12 w-[80%] aspect-auto bg-caribbeangreen-800'>
+        <div className=' text-richblack-25 text-3xl gap-5 p-4 flex absolute -bottom-9 md:right-12 w-full md:w-[80%] aspect-auto bg-caribbeangreen-800'>
                <div className=' flex gap-2 items-center'>
                 <div>10</div>
                 <div className=' text-richblack-100 text-xs'>YEARS EXPERIENCES</div>

@@ -15,13 +15,13 @@ export const ChangeProfilePicture = () => {
   }
   
   return (
-    <div className=' w-[80%] bg-richblack-800 rounded-sm p-6 border-richblack-700 border-[1px] flex justify-between items-start font-inter'>
+    <div className=' w-11/12 md:w-[80%] bg-richblack-800 rounded-sm p-2 md:p-8 border-richblack-700 border-[1px] flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start'>
     
     <div className=' flex items-start gap-5'>
     <img className='w-16 rounded-full border-[1px] border-richblack-800' src={file ? URL.createObjectURL(file) :user?.image}/>
     <div className=' flex flex-col gap-2'>
         <div>Change Profile Picture</div>
-        <div className=' flex gap-2'>
+        <div className=' flex gap-2 flex-wrap md:flex-nowrap'>
         <label>
             <div className=' text-sm cursor-pointer text-richblack-100 px-4 rounded-md border-[1px] border-richblack-100 py-1 bg-richblack-700'>Select</div>
             <input 

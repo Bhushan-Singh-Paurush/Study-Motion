@@ -8,6 +8,8 @@ import { BsFillTriangleFill } from "react-icons/bs";
 import { logout } from '../../services/Operation/authApi'
 import { getAllCategories } from '../../services/Operation/courseApi'
 import LogoSmallLight from "../../assets/Logo/Logo-Small-Light.png"
+import { IoReorderThreeOutline } from "react-icons/io5";
+
 export const Navbar = () => {
 const location=useLocation()
 const{totalItems}=useSelector((state)=>state.cart)
@@ -15,6 +17,7 @@ const{token}=useSelector((state)=>state.auth)
 const{user}=useSelector((state)=>state.profile) 
 const[subLinks,setSubLinks]=useState([])
 const[showModal,setShowModal]=useState(false)
+const[isOpen,setIsOpen]=useState(false)
 
 const dispatch=useDispatch()
 const navigate=useNavigate()
@@ -43,16 +46,17 @@ useEffect(()=>{
 
 
   return (
-    <div className=' w-full border-b-[2px] border-richblack-700 font-inter'>
-        <div className='py-2 mx-auto w-10/12 max-w-[1000px] flex justify-between items-center'>
-            <NavLink className="flex items-center gap-1" to={"/"}><img src={LogoSmallLight}/><div className=' text-3xl text-white font-semibold font-inter'>StudyMotion</div></NavLink>
-            
+    <div className=' w-full py-2 md:py-0 border-b-[2px] border-richblack-700 font-inter'>
+        <div className='py-2 mx-auto w-10/12 max-w-[1000px] flex-wrap md:flex-nowrap flex justify-between items-start md:items-center'>
+            <NavLink className="flex items-center gap-1" to={"/"}><img className='w-[30px] md:w-[40px]' src={LogoSmallLight}/><div className='text-xl  md:text-3xl text-white font-semibold font-inter'>StudyMotion</div></NavLink>
+            <div className=' flex flex-col items-center'>
+            <button onClick={()=>setIsOpen(!isOpen)} className=' text-richblack-100 md:hidden text-3xl font-semibold rotate-180'><IoReorderThreeOutline/></button>
             <nav>
-               <ul className='flex   gap-5'>
+               <ul className={`${isOpen ? "flex flex-col items-center gap-2" : "hidden"} md:flex  md:flex-row md:gap-5`}>
                 {navbarLinks.map((item,index)=>(
                     <li key={index}>
                         {item.title!=="Catalog" ? (
-                            <NavLink to={`${item.path}`}>
+                            <NavLink  onClick={()=>setIsOpen(!isOpen)} to={`${item.path}`}>
                                 <p className={`${matchRoute(item.path) ? " text-yellow-100" : " text-richblack-100"}`}>{item.title}</p>
                             </NavLink>
                         ) : (<div className='z-20 hover:cursor-pointer relative group text-richblack-100'>
@@ -60,7 +64,7 @@ useEffect(()=>{
                         
                         <div className='text-black scale-0 transition-all duration-300 group-hover:scale-100 relative z-10'>
                         <div className=' w-6 h-6 left-5 top-2 absolute rotate-45 bg-white'></div>
-                        <div className=' absolute bg-white p-4 top-4 rounded-lg w-[250px] flex flex-col gap-2'>{subLinks && subLinks.length!==0 ? subLinks.map((item,index)=>(
+                        <div className=' absolute bg-white p-4 top-4 right-0 rounded-lg w-[250px] flex flex-col gap-2'>{subLinks && subLinks.length!==0 ? subLinks.map((item,index)=>(
                             <NavLink to={`/category/${item.name}`} key={index} className=' hover:bg-richblack-25 rounded-md transition-all duration-200 p-2'>
                                 <div >{item.name}</div>
                             </NavLink>
@@ -72,7 +76,7 @@ useEffect(()=>{
                 ))}
                </ul>
             </nav>
-
+            </div>
             {/* Login Signup Dashboard */}
             <div>
 

@@ -12,9 +12,9 @@ export const RenderCartCourses = () => {
     return (
     <div className=' w-full'>
          {cart.map((item,index)=>(
-            <div key={index} className={`flex gap-5 items-start ${index<cart.length-1 && ' border-b-[1px] border-richblack-400'} ${index==0 ? 'pb-4' : 'py-4'}`}>
+            <div key={index} className={`flex flex-wrap md:flex-nowrap gap-5 items-start ${index<cart.length-1 && ' border-b-[1px] border-richblack-400'} ${index==0 ? 'pb-4' : 'py-4'}`}>
               <img className=' w-[100px] aspect-square rounded-md' src={item.thumbnail} alt='cover image'/>
-              <div className=' flex flex-col gap-1 w-[60%]'>
+              <div className=' flex flex-col gap-1 md:w-[60%]'>
                 <div className=' text-sm'>{item.courseName}</div>
                 <div className=' text-xs text-richblack-400'>Name</div>
                 <div className=' flex gap-2 items-center text-xs text-yellow-100'>

@@ -3,8 +3,8 @@ import { IconBtn } from './IconBtn'
 
 export const ConfirmationModal = ({data}) => {
   return (
-    <div className='w-full h-full flex justify-center left-0  absolute bottom-0 bg-richblack-100 bg-opacity-30 backdrop-blur-sm overflow-x-hidden font-inter z-10'>
-        <div className='bg-richblack-800 absolute top-36 w-[25%] p-4 flex flex-col gap-4 rounded-md border-[1px] border-richblack-100'>
+    <div className='w-full h-full flex justify-center left-0  absolute bottom-0 bg-richblack-100 bg-opacity-30 backdrop-blur-sm overflow-x-hidden font-inter z-20'>
+        <div className='bg-richblack-800 absolute top-36 w-[50%] md:w-[25%] p-4 flex flex-col gap-4 rounded-md border-[1px] border-richblack-100'>
                <div className=' font-bold text-lg'>{data.heading}</div>
                <p className=' text-xs text-richblack-100'>{data.subheading}</p>
                <div className='flex gap-5'>

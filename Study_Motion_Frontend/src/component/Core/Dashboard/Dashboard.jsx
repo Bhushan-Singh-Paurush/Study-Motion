@@ -14,10 +14,10 @@ export const Dashboard = () => {
     <Spinner/>
     )
   return (
-    <div className=' relative'>
-    <div className='flex min-h-[calc(100vh-3.5rem)] text-white'>
+    <div className=' relative font-inter'>
+    <div className='flex md:min-h-[calc(100vh-3.5rem)] text-white'>
     <Sidebar/>
-    <div className='flex-1 min-h-[calc(100vh-3.5rem)]'>
+    <div className='flex-1 md:min-h-[calc(100vh-3.5rem)]'>
        <Outlet/>
     </div>
     </div>

@@ -34,7 +34,7 @@ export const CardSlider = ({data}) => {
                 <NavLink to={`/courses/${course._id}`}>
                     <div className=' flex flex-col gap-1'>
                         <img className=' w-[300px] aspect-square  rounded-md' src={course.thumbnail}/>
-                        <div className=' text-lg text-white'>{course.courseName}</div>
+                        <div className='text-sm md:text-lg text-white min-h-28 md:min-h-0'>{course.courseName}</div>
                         <Rating courseId={course._id}/>
                     </div>
                 </NavLink>

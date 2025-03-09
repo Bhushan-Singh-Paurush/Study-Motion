@@ -22,7 +22,7 @@ export const RenderTotalAmount = () => {
        }
     return (
     
-   <div className=' bg-richblack-700 p-4 flex flex-col gap-2 justify-start w-[20%] font-inter rounded-md'>
+   <div className=' bg-richblack-700 p-4 flex flex-col gap-2 justify-start w-full md:w-[20%] font-inter rounded-md'>
         <div className=' text-richblack-400 text-xs'>Total:</div>
         <div className=' text-yellow-100'>Rs {parseInt(totalAmount).toLocaleString("en-US")}</div>
         <button onClick={purchaseHandler} className=' bg-yellow-100 text-black text-sm rounded-md py-1'>Buy Now</button>

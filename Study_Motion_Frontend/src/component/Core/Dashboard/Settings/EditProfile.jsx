@@ -49,12 +49,12 @@ export const EditProfile = () => {
   }
 
   return (
-   <div className=' w-[80%] bg-richblack-800 rounded-sm p-6 border-richblack-700 border-[1px] flex justify-between items-start font-inter'>
+   <div className=' w-11/12 md:w-[80%] bg-richblack-800 rounded-sm p-2 md:p-8 border-richblack-700 border-[1px] flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start'>
   <div className='w-full flex flex-col gap-5'>
     <div>Profile Information</div>
     <form className='flex flex-col gap-5' onSubmit={submitHandelar}>
-      <div className=' w-full flex justify-between items-center'>
-      <label className='w-[45%]'>
+      <div className=' w-full flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-center'>
+      <label className='w-full md:w-[45%]'>
         <div className=' text-sm'>First Name</div>
         <input className="text-richblack-100 text-sm w-[100%] py-2 bg-richblack-700  pl-4 border-b-2 border-gray-300 focus:border-2 focus:outline-none rounded-lg"
         type='text'
@@ -63,7 +63,7 @@ export const EditProfile = () => {
         onChange={Handelar}  
         />
       </label>
-      <label className='w-[45%]'>
+      <label className='w-full md:w-[45%]'>
         <div className=' text-sm'>Last Name</div>
         <input className="text-richblack-100 text-sm w-[100%] py-2 bg-richblack-700  pl-4 border-b-2 border-gray-300 focus:border-2 focus:outline-none rounded-lg" 
         type='text'
@@ -74,8 +74,8 @@ export const EditProfile = () => {
       </label>
       </div>
 
-      <div className=' w-full flex justify-between items-center'>
-      <label className='w-[45%]' >
+      <div className=' w-full flex flex-col md:flex-row gap-2 md:gap-0 justify-between items-center'>
+      <label className='w-full md:w-[45%]' >
         <div className=' text-sm'>Date of Birth</div>
         <DatePicker 
         className=" w-full rounded-md text-black"
@@ -86,7 +86,7 @@ export const EditProfile = () => {
         />
         
       </label>
-      <label className='w-[45%]'>
+      <label className='w-full md:w-[45%]'>
         <div className=' text-sm'>Gender</div>
         <select name='gender' className="text-richblack-100 text-sm w-[100%] py-2 bg-richblack-700  pl-4 border-b-2 border-gray-300 focus:border-2 focus:outline-none rounded-lg"
           onChange={Handelar}>
@@ -97,8 +97,8 @@ export const EditProfile = () => {
       </label>
       </div>
 
-      <div className=' w-full flex justify-between items-center'>
-      <label className='w-[45%]'>
+      <div className=' w-full flex flex-col md:flex-row gap-2 md:gap-0 justify-between items-center'>
+      <label className='w-full md:w-[45%]'>
         <div className=' text-sm'>Contact Number</div>
         <input className="text-richblack-100 text-sm w-[100%] py-2 bg-richblack-700  pl-4 border-b-2 border-gray-300 focus:border-2 focus:outline-none rounded-lg"
         type='number'
@@ -108,7 +108,7 @@ export const EditProfile = () => {
         required
         />
       </label>
-      <label className='w-[45%]'>
+      <label className='w-full md:w-[45%]'>
         <div className=' text-sm'>About</div>
         <input className="text-richblack-100 text-sm w-[100%] py-2 bg-richblack-700  pl-4 border-b-2 border-gray-300 focus:border-2 focus:outline-none rounded-lg"
         type='text'

@@ -50,8 +50,8 @@ export const CourseDetailsCard = ({course,setConfirmationModal,purchaseHandler})
     }
 
     return (
-    <div className=' flex flex-col gap-2 bg-richblack-700 border-[1px] border-richblack-600 rounded-lg'>
-    <img className=' w-[250px] h-[200px]  aspect-auto rounded-lg brightness-75' src={course.thumbnail}/>
+    <div className='mt-10 md:mt-0 flex flex-col gap-2 bg-richblack-700 border-[1px] border-richblack-600 rounded-lg'>
+    <img className='w-full md:w-[250px] h-[300px] md:h-[200px]  aspect-auto rounded-lg brightness-75' src={course.thumbnail}/>
     <div className=' flex flex-col gap-2 p-4 w-full'>
         <div className=' text-white text-2xl'>Rs. {parseInt(course.price).toLocaleString("en-US")}</div>
         <button className=' w-full rounded-md bg-yellow-100 border-[1px] border-yellow-5 text-sm text-black py-1' onClick={()=>Handler(true)}>Buy Now</button>

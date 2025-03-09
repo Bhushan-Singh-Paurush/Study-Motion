@@ -36,7 +36,7 @@ export const About = () => {
         
         {/* First Section */}
         <div className="absolute -top-80">
-          <div className=" flex w-full max-w-[1000px] gap-5 mx-auto flex-wrap">
+          <div className=" flex flex-col md:flex-row w-full max-w-[1000px] md:gap-5 mx-auto flex-wrap">
             <div className="w-[320px] aspect-square">
               <img src={aboutus1} />
             </div>
@@ -50,7 +50,7 @@ export const About = () => {
         </div>
 
         {/* Second Section */}
-        <div className=" text-3xl text-richblack-100 font-semibold max-w-[1000px] mx-auto text-center">
+        <div className="mt-[650px] md:mt-0 text-3xl text-richblack-100 font-semibold w-10/12 max-w-[1000px] mx-auto text-center">
           " We are passionate about revolutionizing the way we learn. Our
           innovative platform
           <HighlightedText>combines technology</HighlightedText>
@@ -65,23 +65,23 @@ export const About = () => {
       </section>
 
       {/* Section 3 */}
-      <section className="my-20 gap-20 w-full flex flex-col items-center font-inter">
+      <section className=" md:my-20 gap-20 w-full flex flex-col items-center font-inter">
         
         {/* Left Section */}
-        <div className=" w-10/12 max-w-[1000px] flex gap-20 items-center">
+        <div className=" w-11/12 max-w-[1000px] flex flex-col md:flex-row gap-20 items-center">
           {/* Left Section */}
-          <div className=" flex flex-col gap-2 w-full">
+          <div className=" flex flex-col items-center md:items-start gap-2 w-full">
             <div className="redgradient text-3xl font-semibold">
               Our Founding Story
             </div>
-            <p className=" text-richblack-100 text-sm">
+            <p className=" text-richblack-100 text-sm text-center md:text-start">
               Our e-learning platform was born out of a shared vision and
               passion for transforming education. It all began with a group of
               educators, technologists, and lifelong learners who recognized the
               need for accessible, flexible, and high-quality learning
               opportunities in a rapidly evolving digital world.
             </p>
-            <p className=" text-richblack-100 text-sm">
+            <p className=" text-richblack-100 text-sm text-center md:text-start">
               As experienced educators ourselves, we witnessed firsthand the
               limitations and challenges of traditional education systems. We
               believed that education should not be confined to the walls of a
@@ -96,7 +96,7 @@ export const About = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-10/12 max-w-[1000px] flex gap-20 items-center">
+        <div className="w-10/12 max-w-[1000px] flex md:flex-row flex-col gap-5 md:gap-20 items-start md:items-center">
           <div className=" flex flex-col gap-2 w-full">
             <div className="yellowgradient text-3xl font-semibold">
               Our Vision
@@ -114,7 +114,7 @@ export const About = () => {
             <div className=" text-3xl font-semibold">
               <HighlightedText>Our Mission</HighlightedText>
             </div>
-            <p className=" text-richblack-100 text-sm">
+            <p className=" text-richblack-100 text-sm mb-20 md:mb-0">
               our mission goes beyond just delivering courses online. We wanted
               to create a vibrant community of learners, where individuals can
               connect, collaborate, and learn from one another. We believe that

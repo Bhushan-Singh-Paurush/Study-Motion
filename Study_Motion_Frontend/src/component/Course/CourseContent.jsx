@@ -10,8 +10,8 @@ export const CourseContent = ({course}) => {
     return (
     <div className=' w-10/12 max-w-[600px] text-richblack-50 font-inter my-10 flex flex-col gap-2'>
     <div className=' text-white text-2xl'>CourseContent</div>
-    <div className=' flex w-full justify-between items-center text-xs'>
-        <div className=' flex gap-3 items-center'>
+    <div className=' flex flex-wrap gap-4 md:gap-0 md:flex-nowrap w-full justify-between items-center text-xs'>
+        <div className=' flex gap-1  md:gap-3 items-center'>
         {course.courseContent?.length} Sections<GoDotFill/>{totalLecture} Lectures <GoDotFill/> <TimeDuration time={course.totalCourseDuration}/> total lenght</div>
     <div className=' flex gap-3 items-center text-yellow-100'>
      <button onClick={()=>setIsExpand(true)}>expend all sections</button>

@@ -5,7 +5,7 @@ import { CTAbutton } from './CTAbutton'
 
 export const CodeBlocks = ({heading,subheading,position,button1,button2,codetext,codecolor}) => {
   return (
-    <div className={`${position} gap-10 w-full mx-auto items-start my-40 flex`}>
+    <div className={`${position} gap-10 w-full mx-auto items-start my-20 md:my-40 flex flex-col  md:flex-row`}>
        
         {/* right section */}
         <div className=' flex flex-col gap-5 w-[100%]'>

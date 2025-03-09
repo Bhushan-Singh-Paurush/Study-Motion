@@ -23,10 +23,10 @@ export const ChangePassword = () => {
   }
 
   return (
-    <div className=' w-[80%] bg-richblack-800 rounded-sm p-6 border-richblack-700 border-[1px] flex justify-between items-start font-inter'>
+    <div className=' w-11/12 md:w-[80%] bg-richblack-800 rounded-sm p-2 md:p-8 border-richblack-700 border-[1px] flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start'>
           <form onSubmit={submitHandelar} className='flex flex-col gap-5 w-full'>
-          <div  className=' flex w-full justify-between flex-wrap gap-y-4'>
-          <label className="w-[45%] relative">
+          <div  className=' flex flex-col md:flex-row gap-2 md:gap-0 w-full justify-between flex-wrap gap-y-4'>
+          <label className="w-full md:w-[45%] relative">
               <p className=" text-white text-sm ">
                 Current Password <sup className="text-lg text-pink-500">*</sup>
               </p>
@@ -50,7 +50,7 @@ export const ChangePassword = () => {
             </label>
           
           
-          <label className=" relative w-[45%]">
+          <label className=" relative w-full md:w-[45%]">
               <p className=" text-white text-sm ">
                 Creat Password <sup className="text-lg text-pink-500">*</sup>
               </p>
@@ -72,7 +72,7 @@ export const ChangePassword = () => {
                 {showpass1 ? <FaEyeSlash /> : <FaEye />}
               </span>
             </label>
-            <label className=" relative w-[45%]">
+            <label className=" relative w-full md:w-[45%]">
               <p className=" text-white text-sm ">
                 Confirm Password <sup className="text-lg text-pink-500">*</sup>
               </p>

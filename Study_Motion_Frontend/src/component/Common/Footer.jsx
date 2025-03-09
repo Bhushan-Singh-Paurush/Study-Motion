@@ -13,10 +13,10 @@ export const Footer = () => {
     return (
         <div className=" w-full bg-richblack-800">
 
-            <div className=" mx-auto py-10 w-10/12 mxa-w-[1000px] flex flex-col items-center gap-10 font-inter">
-                <div className="w-full flex justify-between items-start">
+            <div className=" mx-auto py-10 w-10/12 max-w-[1000px] flex flex-col items-center gap-10 font-inter">
+                <div className="w-full flex gap-10 md:gap-0 md:justify-between items-start">
 
-                    <div className="flex w-[48%]  justify-between ">
+                    <div className="flex w-full flex-col md:flex-row md:w-[48%]  justify-between ">
 
                         {/* first */}
                         <div className=" flex flex-col gap-2">
@@ -114,7 +114,7 @@ export const Footer = () => {
 
                     </div>
 
-                    <div className=" flex w-[48%] justify-between">
+                    <div className="flex w-full flex-col md:flex-row md:w-[48%]  justify-between ">
 
                         {/* six */}
                         <div>{Array(footerLinks[5]).map((value, index) => (

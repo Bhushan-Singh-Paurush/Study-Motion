@@ -22,9 +22,9 @@ export const CourseDetails = () => {
 
     useEffect(()=>{
         ;(async()=>{
-            const result = await getFullDetailsOfCourse(courseId)
+            const result = await getFullDetailsOfCourse(courseId)    
             if(result)
-                setCourse(result?.courseDetail);
+                setCourse(result);
         })()
     },[courseId])
     const purchaseHandler=async()=>{
@@ -40,7 +40,7 @@ export const CourseDetails = () => {
         )
     }
     return (
-    <div>
+    <div className=' relative'>
      <div className=' w-full flex bg-richblack-800 flex-col font-inter'>
     <div className=' mx-auto w-10/12 py-10 flex flex-col gap-2 text-sm text-richblack-50'>
      
@@ -71,14 +71,15 @@ export const CourseDetails = () => {
         <div key={index}>{line}</div>
       ))}</div>
       </div>
-      <div className=' absolute right-0 -top-64'><CourseDetailsCard course={course} setConfirmationModal={setConfirmationModal}
+      <div className='md:absolute right-0 -top-64'><CourseDetailsCard course={course} setConfirmationModal={setConfirmationModal}
         purchaseHandler={purchaseHandler}/></div>
       <CourseContent course={course}/>  
     </div>
-    {confirmationModal && <ConfirmationModal data={confirmationModal}/>}
+   
     
       <ReviewSection/>
     <Footer/>
+    {confirmationModal && <ConfirmationModal data={confirmationModal}/>}
     </div>
   )
 }
