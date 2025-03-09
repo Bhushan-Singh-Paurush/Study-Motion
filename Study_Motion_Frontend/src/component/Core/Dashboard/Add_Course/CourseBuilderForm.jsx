@@ -23,7 +23,7 @@ export const CourseBuilderForm = () => {
        const[loading,setLoading]=useState(false)
        const{token}=useSelector((state)=>state.auth)
        const dispatch=useDispatch()
-       console.log("inside",course);
+  
        function cancelEdit()
        {  
         setValue("sectionName","")
