@@ -4,7 +4,7 @@ import { Footer } from '../component/Common/Footer'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCompletedLectures, setCourseEntireData, setCourseSectionData, setTotalnoofLecture } from '../slices/ViewCourseSlice'
 import { ViewCourseSidebar } from '../component/Core/ViewCourse/ViewCourseSidebar'
-import { getFullDetailsOfCourse } from '../services/Operation/courseApi'
+import { getFullDetailsOfUserCourse } from '../services/Operation/courseApi'
 import {Swiper,SwiperSlide} from "swiper/react"
 import { Autoplay } from 'swiper/modules';
 import {bgImageUrl} from  "../data/ViewDetailImages"
@@ -19,7 +19,7 @@ export const ViewCourse = () => {
      const[courseModal,setCourseModal]=useState()
     useEffect(()=>{
         ;(async()=>{
-            const result = await getFullDetailsOfCourse({courseId},token)
+            const result = await getFullDetailsOfUserCourse({courseId},token)
             {   
                 dispatch(setCourseEntireData(result?.courseDetail))
                 dispatch(setCourseSectionData(result?.courseDetail?.courseContent))

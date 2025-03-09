@@ -221,13 +221,41 @@ export async function editCourseDetails(fromdata,token) {
   toast.dismiss(toastId)
 }
 
-export async function getFullDetailsOfCourse(courseId,token) {
+export async function getFullDetailsOfCourse(courseId) {
 
   
   const toastId=toast.loading("Loading...")
   try {
     const response = await apiConnector("POST",
       course.GET_COURSE_DETAIL,
+      courseId,
+    )
+    
+    if(!response.data.success)
+    {
+      throw new Error("Failed to get course details");
+    }
+
+    toast.dismiss(toastId)
+    toast.success(response.data.message)
+
+    
+    
+    return {
+      courseDetail:response.data.courseDetail,
+    }
+  } catch (error) {
+    toast.error(error.response.data.message)
+  }
+  toast.dismiss(toastId)
+}
+export async function getFullDetailsOfUserCourse(courseId,token) {
+
+  
+  const toastId=toast.loading("Loading...")
+  try {
+    const response = await apiConnector("POST",
+      course.GET_USER_COURSE_DETAIL,
       courseId,
     {
       Authorization : `Bearer ${token}`

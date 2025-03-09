@@ -1,7 +1,7 @@
 const express = require("express")
 const Router = express.Router()
 
-const{createCourse,showAllCourse,getCourseDetail, updateCourse, deleteCourse}=require("../Controller/Course")
+const{createCourse,showAllCourse,getCourseDetail, updateCourse, deleteCourse, getUserCourseDetail}=require("../Controller/Course")
 
 const{auth,isInstructor}=require("../Middleware/auth")
 const upload = require("../Middleware/Multer")
@@ -15,7 +15,9 @@ Router.post("/createCourse",auth,isInstructor,upload.single("file"), createCours
 
 Router.get("/showAllCourse",showAllCourse)
 
-Router.post("/getCourseDetail",auth,getCourseDetail)
+Router.post("/getUserCourseDetail",auth,getUserCourseDetail)
+
+Router.post("/getCourseDetail",getCourseDetail)
 
 Router.post("/updateCourse",upload.single("file"),updateCourse)
 

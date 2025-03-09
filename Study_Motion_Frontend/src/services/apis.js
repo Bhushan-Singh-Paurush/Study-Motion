@@ -34,7 +34,8 @@ export const course={
         UPDATE_COURSE:base_url+"/course/updateCourse",
         DELETE_COURSE:base_url+"/course/deleteCourse",
         GET_COURSE_DETAIL:base_url+"/course/getCourseDetail",
-        COURSE_PROGRESS:base_url+"/course/addLectureVideo"
+        COURSE_PROGRESS:base_url+"/course/addLectureVideo",
+        GET_USER_COURSE_DETAIL:base_url+"/course/getUserCourseDetail"
 }
 export const section={
         CREATE_SECTION:base_url+"/section/createSection",

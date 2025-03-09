@@ -96,7 +96,7 @@ exports.showAllCourse=async(req,res)=>{
     }
 }
 
-exports.getCourseDetail=async(req,res)=>{
+exports.getUserCourseDetail=async(req,res)=>{
     try {
         
         const courseId = req.body.courseId
@@ -155,7 +155,52 @@ exports.getCourseDetail=async(req,res)=>{
         })
     }
 }
+exports.getCourseDetail=async(req,res)=>{
+    try {
+        
+        const courseId = req.body.courseId
+       
+        const courseDetail = await Course.findById(courseId).populate(
+                  {
+                    path:"instructor",
+                    populate:{
+                        path:"additionaldetail"
+                    }
+                  }
+        ).populate("ratingAndReveiw")
+        .populate("category")
+        .populate({
+            path:"courseContent",
+            populate:{
+                path:"subSection"
+            }
 
+        }).exec();
+     
+       
+        if(!courseDetail){
+            return res.status(400).json({
+                success:false,
+                message:`This course not found`
+            })
+        }
+        return res.status(200).json({
+            success:true,
+            message:"that's all course detail",
+            courseDetail,
+
+        })
+
+    } catch (error) {
+        console.log(error);
+        
+        return res.status(500).json({
+            success:false,
+            message:"Failed to get course detail",
+            error:error.message
+        })
+    }
+}
 exports.updateCourse=async(req,res)=>{
     try {
         const{courseId}=req.body

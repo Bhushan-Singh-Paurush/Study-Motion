@@ -14,7 +14,6 @@ import { Footer } from '../component/Common/Footer'
 import { ReviewSection } from '../component/Common/ReviewSection'
 export const CourseDetails = () => {
     const{user}=useSelector((state)=>state.profile)
-    const{token}=useSelector((state)=>state.auth)
     const navigate=useNavigate()
     const dispatch=useDispatch()
     const courseId=useParams()
@@ -23,7 +22,7 @@ export const CourseDetails = () => {
 
     useEffect(()=>{
         ;(async()=>{
-            const result = await getFullDetailsOfCourse(courseId,token)
+            const result = await getFullDetailsOfCourse(courseId)
             if(result)
                 setCourse(result?.courseDetail);
         })()
