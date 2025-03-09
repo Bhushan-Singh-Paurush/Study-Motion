@@ -73,6 +73,7 @@ const coursesSchema=new mongoose.Schema({
          },
          status:{
             type:String,
+            default:"Draft",
             enum:["Draft","Published"]
          }
 },{timestamps:true})
