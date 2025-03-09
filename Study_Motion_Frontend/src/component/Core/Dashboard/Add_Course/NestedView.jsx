@@ -11,6 +11,8 @@ import { SubSectionModal } from "./SubSectionModal";
 import {FaPlus} from "react-icons/fa"
 
 export const NestedView = ({ handleChangeEditSection }) => {
+  
+  
   const { course } = useSelector((state) => state.course);
   const [confirmationModal, setConfirmationModal] = useState(null);
   const { token } = useSelector((state) => state.auth);

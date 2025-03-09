@@ -38,14 +38,14 @@ export const CourseInformationForm = () => {
         }
         if(isedit)
         {
-              setValue("courseTitle",course?.courseDetail?.courseName)
-              setValue("courseDescription",course?.courseDetail?.description)
-              setValue("Category",course?.courseDetail?.category)
-              setValue("thumnail",course?.courseDetail?.thumbnail)
-              setValue("courseBenefits",course?.courseDetail?.whatYouWillLearn)
-              setValue("Requirements",JSON.parse(course?.courseDetail?.instructions))
-              setValue("courseTag",JSON.parse(course?.courseDetail?.tag))
-              setValue("coursePrice",course?.courseDetail?.price)
+              setValue("courseTitle",course?.courseName)
+              setValue("courseDescription",course?.description)
+              setValue("Category",course?.category)
+              setValue("thumnail",course?.thumbnail)
+              setValue("courseBenefits",course?.whatYouWillLearn)
+              setValue("Requirements",JSON.parse(course?.instructions))
+              setValue("courseTag",JSON.parse(course?.tag))
+              setValue("coursePrice",course?.price)
         }
        getCategory()
     },[])
@@ -53,14 +53,14 @@ export const CourseInformationForm = () => {
     function isFormUpdated(){
        const currentValues=getValues()
        
-       if(currentValues.courseTitle !==course?.courseDetail?.courseName
-        || currentValues.courseDescription !==course?.courseDetail?.description
-        || currentValues.Category !==course?.courseDetail?.category
-        || currentValues.thumnail !==course?.courseDetail?.thumbnail
-        || currentValues.courseBenefits !==course?.courseDetail?.whatYouWillLearn
-        || JSON.stringify(currentValues.Requirements) !==course?.courseDetail?.instructions
-        || JSON.stringify(currentValues.courseTag) !==course?.courseDetail?.tag
-        || currentValues.coursePrice!==course?.courseDetail?.price
+       if(currentValues.courseTitle !==course?.courseName
+        || currentValues.courseDescription !==course?.description
+        || currentValues.Category !==course?.category
+        || currentValues.thumnail !==course?.thumbnail
+        || currentValues.courseBenefits !==course?.whatYouWillLearn
+        || JSON.stringify(currentValues.Requirements) !==course?.instructions
+        || JSON.stringify(currentValues.courseTag) !==course?.tag
+        || currentValues.coursePrice!==course?.price
        ){
         return true
        }
@@ -77,36 +77,36 @@ export const CourseInformationForm = () => {
                 const currentValues=getValues()
                 const formData=new FormData()
                 formData.append("courseId",course._id)
-                if(currentValues.courseTitle !==course?.courseDetail?.courseName)
+                if(currentValues.courseTitle !==course?.courseName)
                 {
                     formData.append("courseName",currentValues.courseTitle)
                 }
-                if(currentValues.courseDescription !==course?.courseDetail?.description)
+                if(currentValues.courseDescription !==course?.description)
                 {
                     formData.append("description",currentValues.courseDescription)
                 }
-                if(currentValues.Category?.name !==course?.courseDetail?.category?.name)
+                if(currentValues.Category?.name !==course?.category?.name)
                 {
                     
                     formData.append("category",currentValues.Category)
                 }
-                if(currentValues.thumnail !==course?.courseDetail?.thumbnail)
+                if(currentValues.thumnail !==course?.thumbnail)
                 {
                     formData.append("file",currentValues.thumnail)
                 }
-                if(currentValues.courseBenefits !==course?.courseDetail?.whatYouWillLearn)
+                if(currentValues.courseBenefits !==course?.whatYouWillLearn)
                 {
                     formData.append("whatYouWillLearn",currentValues.courseBenefits)
                 }
-                if(JSON.stringify(currentValues.Requirements) !==course?.courseDetail?.instructions)
+                if(JSON.stringify(currentValues.Requirements) !==course?.instructions)
                 {
                     formData.append("instructions",JSON.stringify(currentValues.Requirements))
                 }
-                if(JSON.stringify(currentValues.courseTag) !==course?.courseDetail?.tag)
+                if(JSON.stringify(currentValues.courseTag) !==course?.tag)
                 {
                     formData.append("tag",JSON.stringify(currentValues.courseTag))
                 }
-                if(currentValues.coursePrice!==course?.courseDetail?.price)
+                if(currentValues.coursePrice!==course?.price)
                 {
                     formData.append("price",currentValues.coursePrice)
                 }
@@ -226,7 +226,7 @@ export const CourseInformationForm = () => {
            name={"thumnail"} 
            placeholder={"Drag and drop an image, or click to Browse a file"}
            setValue={setValue}
-           editData={course?.courseDetail?.thumbnail}
+           editData={course?.thumbnail}
            />
                 <label className=' flex flex-col gap-1'>
                 <div>Benefits of the course<sup className="text-pink-500">*</sup></div>

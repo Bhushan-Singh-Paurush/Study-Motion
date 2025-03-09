@@ -15,7 +15,7 @@ export const CourseBuilderForm = () => {
   const{register,
         setValue,
         getValue,
-        formState:{errors},
+        formState:{errors}, 
         handleSubmit
        }=useForm()
        const{course}=useSelector((state)=>state.course)
@@ -23,7 +23,7 @@ export const CourseBuilderForm = () => {
        const[loading,setLoading]=useState(false)
        const{token}=useSelector((state)=>state.auth)
        const dispatch=useDispatch()
-       
+       console.log("inside",course);
        function cancelEdit()
        {  
         setValue("sectionName","")
@@ -102,7 +102,7 @@ export const CourseBuilderForm = () => {
             placeholder='Add a section to build your course'
             {...register("sectionName",{required:true})}   
             />
-           
+            
              </label>
             <div className=' w-full flex justify-between'>
             <IconBtn outline={true} 

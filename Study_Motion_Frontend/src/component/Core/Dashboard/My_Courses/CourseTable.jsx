@@ -90,7 +90,7 @@ export const CourseTable = ({ courses, setCourses }) => {
                 </button>
                 <button onClick={()=>setConfirmayionModal({
                     heading:"Delete the Course ?",
-                    subheadingL:"All the Lectures are deleted",
+                    subheading:"All the Lectures are deleted",
                     btn1text:"Delete",
                     btn2text:"Cancle",
                     btn1handelar:()=>deleteHandler(course._id),

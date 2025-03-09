@@ -21,8 +21,8 @@ export const Tags = ({register,
         if(isedit)
         {
 
-        type === "tag" ? setChips(JSON.parse(course?.courseDetail?.tag)) 
-        : type==="Requirements" && setChips(JSON.parse(course?.courseDetail?.instructions))
+        type === "tag" ? setChips(JSON.parse(course?.tag)) 
+        : type==="Requirements" && setChips(JSON.parse(course?.instructions))
         }
         register(name,{required:true , validate:(value)=>value.length>0})
     },[]) 

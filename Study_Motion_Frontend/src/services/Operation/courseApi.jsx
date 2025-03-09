@@ -243,9 +243,8 @@ export async function getFullDetailsOfCourse(courseId) {
 
     
     
-    return {
-      courseDetail:response.data.courseDetail,
-    }
+    return response.data.courseDetail
+    
   } catch (error) {
     toast.error(error.response.data.message)
   }
