@@ -23,21 +23,21 @@ export const PublishCourse = () => {
         navigate("/dashboard/my-courses")
   }
   useEffect(()=>{
-    if(course?.courseDetail?.status===COURSE_STATUS.PUBLISHED)
+    if(course?.status===COURSE_STATUS.PUBLISHED)
     {
       setValue("public",true)
     }
   },[])
   const Submit=async(data)=>{
-       if((course?.courseDetail?.status===COURSE_STATUS.PUBLISHED && getValues("public")===true)
-          || (course?.courseDetail?.status===COURSE_STATUS.DRAFT  && getValues("public")===false))
+       if((course?.status===COURSE_STATUS.PUBLISHED && getValues("public")===true)
+          || (course?.status===COURSE_STATUS.DRAFT  && getValues("public")===false))
         {
           gotoCourses()
           return 
         }else{
           const formdata=new FormData()
           const status=getValues("public") ? COURSE_STATUS.PUBLISHED : COURSE_STATUS.DRAFT
-          formdata.append("courseId",course?.courseDetail?._id)
+          formdata.append("courseId",course?._id)
           formdata.append("status",status)
           
           setLoading(true)

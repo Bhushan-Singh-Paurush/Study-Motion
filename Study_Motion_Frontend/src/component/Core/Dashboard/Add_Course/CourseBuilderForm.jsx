@@ -23,7 +23,7 @@ export const CourseBuilderForm = () => {
        const[loading,setLoading]=useState(false)
        const{token}=useSelector((state)=>state.auth)
        const dispatch=useDispatch()
-      
+       
        function cancelEdit()
        {  
         setValue("sectionName","")
@@ -39,11 +39,11 @@ export const CourseBuilderForm = () => {
               result=await updateSection({
                     sectionName:data.sectionName,
                     sectionId:editSubmitName,
-                    courseId:course?.courseDetail?._id
+                    courseId:course?._id
                 },token)
             }else{
                 result = await createSection({sectionName:data.sectionName,
-                    courseId:course?.courseDetail?._id
+                    courseId:course?._id
                 },token)
             }    
             if(result)
@@ -77,12 +77,12 @@ export const CourseBuilderForm = () => {
        }
 
        function goNext(){
-        if(course?.courseDetail?.courseContent.length===0)
+        if(course?.courseContent.length===0)
         {
           toast.error("Add atleast one section")
           return 
         }
-        if(course?.courseDetail?.courseContent.some((Section)=>Section.subSection.length===0))
+        if(course?.courseContent.some((Section)=>Section.subSection.length===0))
         {
           toast.error(`Add atleast one Lecture`)
           return 
@@ -116,7 +116,7 @@ export const CourseBuilderForm = () => {
              </IconBtn>}
              </div>
           </form>
-          {course?.courseDetail?.courseContent.length>0 && <NestedView  handleChangeEditSection={handleChangeEditSection}/>}
+          {course?.courseContent.length>0 && <NestedView  handleChangeEditSection={handleChangeEditSection}/>}
         
         <div className=' w-full flex gap-2 items-center place-content-end'>
 

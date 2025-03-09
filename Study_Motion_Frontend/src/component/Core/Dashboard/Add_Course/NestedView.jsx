@@ -45,7 +45,7 @@ export const NestedView = ({ handleChangeEditSection }) => {
           
           if(result)
           {
-            const updatedCouseContent=course?.courseDetail?.courseContent?.map((section)=>(
+            const updatedCouseContent=course?.courseContent?.map((section)=>(
                     section._id===sectionId ? result : section
             ))
 
@@ -61,7 +61,7 @@ export const NestedView = ({ handleChangeEditSection }) => {
  
   return (
     <div>
-      {course?.courseDetail?.courseContent?.map((item, index) => (
+      {course?.courseContent?.map((item, index) => (
         <details key={index} open className=" flex flex-col gap-2">
           <summary className=" font-inter flex gap-4 py-1 items-center w-full text-richblack-100 border-b-[1px] border-richblack-100">
             <div className=" flex w-full justify-between items-center">
@@ -86,7 +86,7 @@ export const NestedView = ({ handleChangeEditSection }) => {
                       btn1text: "Delete",
                       btn2text: "Cancel",
                       btn1handelar: () =>
-                        handleDeleteSection(item._id, course?.courseDetail?._id, token),
+                        handleDeleteSection(item._id, course?._id, token),
                       btn2handelar: () => setConfirmationModal(null),
                     })
                   }

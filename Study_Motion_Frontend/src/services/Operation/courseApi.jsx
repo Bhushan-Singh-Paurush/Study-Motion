@@ -41,6 +41,8 @@ export async function addCourseDetails(formdata, token) {
   toast.dismiss(toastid)
 }
 export async function createSection(data, token) {
+ 
+  
   const toastId = toast.loading("Loading...");
   try {
     const response = await apiConnector(
