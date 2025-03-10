@@ -133,12 +133,12 @@ export const ViewDetail = () => {
   }
   
   return (
-    <div className=" relative flex justify-center items-center w-full h-full">
-      <div className="z-10 relative w-[85%]">
+    <div className=" relative flex justify-center items-center w-full h-[50vh]  md:h-full">
+      <div className="z-10 relative">
         {!videoData ? (
           <img src={preview} />
         ) : (
-          <div>
+          <div className="w-[250px] md:w-full">
           <ReactPlayer
             ref={playerRef}
             className=" relative"
@@ -146,6 +146,7 @@ export const ViewDetail = () => {
             url={videoData}
             controls={true}
             loop={false}
+            width="100%"
           />
             {videoEnded && (
               <div className=" top-0 z-40 left-0 w-full h-full flex justify-center items-center absolute">

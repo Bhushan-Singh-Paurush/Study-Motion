@@ -31,7 +31,7 @@ export const ViewCourse = () => {
     },[])
     return (
     <div className=' relative'>
-    <div className='flex min-h-[calc(100vh-3.5rem)] text-white'>
+    <div className='flex min-h-[50vh] md:min-h-[calc(100vh-3.5rem)] text-white'>
     <div className='absolute top-0 left-0 w-full'>
    <Swiper
     centeredSlides={true}
@@ -47,13 +47,13 @@ export const ViewCourse = () => {
    >
     {bgImageUrl.map((item,index)=>(
       <SwiperSlide key={index}>
-        <img className=' brightness-50 w-full object-cover max-h-[calc(100vh-3.5rem)]' src={item}/>
+        <img className=' brightness-50 w-full object-cover min-h-[50vh] md:min-h-0 md:max-h-[calc(100vh-3.5rem)]' src={item}/>
       </SwiperSlide>  
     ))}
    </Swiper>
    </div>
     <ViewCourseSidebar setCourseModal={setCourseModal}/>
-    <div className='flex-1 min-h-[calc(100vh-3.5rem)]'>
+    <div className='flex-1 md:min-h-[calc(100vh-3.5rem)]'>
        <Outlet/>
     </div>
     </div>

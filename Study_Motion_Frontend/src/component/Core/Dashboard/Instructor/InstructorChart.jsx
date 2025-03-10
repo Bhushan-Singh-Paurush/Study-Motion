@@ -48,7 +48,7 @@ const options = {
   };
   
     return (
-    <div className='w-[70%] bg-richblack-800 py-2 flex gap-2 flex-col  rounded-sm border-[1px] border-richblack-700'>
+    <div className='w-full order-2 md:order-1 md:w-[70%] bg-richblack-800 py-2 flex gap-2 flex-col  rounded-sm border-[1px] border-richblack-700'>
       <Pie data={data} width={800} height={800} options={options}/>
     </div>
   )

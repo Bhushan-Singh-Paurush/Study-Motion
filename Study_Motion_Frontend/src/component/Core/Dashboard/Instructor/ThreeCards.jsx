@@ -8,7 +8,7 @@ export const ThreeCards = ({courses}) => {
         <div>Your Courses</div>
         <NavLink className=" text-yellow-100" to={"/dashboard/my-courses"}>View All</NavLink>
     </div>
-    <div className=' w-full flex gap-4'>{courses.slice(0,3).map((course,index)=>(
+    <div className=' w-full flex flex-col md:flex-row gap-4'>{courses.slice(0,3).map((course,index)=>(
         <div className=' flex flex-col gap-2 w-full' key={index}>
             <img className='w-[200px] rounded-sm aspect-square' src={course.thumbnail}/>
             <div className='text-sm'>{course.courseName}</div>

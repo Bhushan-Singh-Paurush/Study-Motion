@@ -33,7 +33,7 @@ export const MyCourses = () => {
     },[])
     return (
     <div className='w-full h-full flex flex-col my-10 items-center gap-10'>
-    <div className='w-[80%] flex flex-col gap-5'>
+    <div className='w-11/12 md:w-[80%] flex flex-col gap-5'>
     <div className=' flex w-full justify-between text-xl'>
         <div>My Course</div>
         <IconBtn  active={true} onclick={AddNewCourse} text={"Add Course"}>

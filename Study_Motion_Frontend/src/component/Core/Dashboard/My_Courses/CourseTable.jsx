@@ -31,7 +31,7 @@ export const CourseTable = ({ courses, setCourses }) => {
        setConfirmayionModal(null)
   }
     return (
-    <div className=" w-full p-2 border-[1px] border-richblack-700 rounded-md font-inter">
+    <div className=" w-full md:p-2 border-[1px] border-richblack-700 rounded-md font-inter">
       <Table className=" border-separate border-spacing-4">
         <Thead>
           <Tr className=" text-sm text-richblack-100">

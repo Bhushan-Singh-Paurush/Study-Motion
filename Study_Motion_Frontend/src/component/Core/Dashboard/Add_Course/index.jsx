@@ -14,8 +14,8 @@ const tipsData = [
 ];
 export const AddCourse = () => {
   return (
-    <div className=" w-full h-full p-10 relative">
-    <div className=" w-[90%] mx-auto flex gap-10 items-start">
+    <div className=" w-full h-full md:p-10 relative">
+    <div className="w-11/12 md:w-[90%] mx-auto flex flex-col md:flex-row gap-10 items-start">
       <Stepdata/>
       <div className=" p-4 bg-richblack-700 text-white flex flex-col gap-2 font-inter">
       <div className=" flex gap-2 items-center text-lg">

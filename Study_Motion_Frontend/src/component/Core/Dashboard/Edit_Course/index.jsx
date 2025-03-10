@@ -47,8 +47,8 @@ export const EditCourse = () => {
         </div>
     }
     return (
-     <div className=" w-full h-full p-10 relative">
-     { course ? <div className=" w-[90%] mx-auto flex gap-10 items-start">
+     <div className=" w-full h-full md:p-10 py-2 md:py-0 relative">
+     { course ? <div className="w-11/12 md:w-[90%] mx-auto flex flex-col md:flex-row gap-10 items-start">
        
        
        <Stepdata/>

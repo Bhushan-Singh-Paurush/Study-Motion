@@ -29,7 +29,7 @@ export const ViewCourseSidebar = ({setCourseModal}) => {
   },[courseSectionData,courseEntireData,location.pathname])
 
   return (
-    <div className=" bg-richblack-800 w-[20%] font-inter z-10 bg-opacity-75">
+    <div className=" bg-richblack-800 min-w-[30%] md:min-w-0  md:w-[20%] font-inter z-10 bg-opacity-75">
       <div className=" flex flex-col w-full gap-2">
         <div className='p-2 py-4 flex gap-4 w-full font-bold flex-wrap text-sm border-b-[1px]  text-richblack-25 border-richblack-400'>
           <NavLink className="text-richblack-400 flex gap-2 items-center" to={"/dashboard/enrolled-courses"}><FaCircleChevronLeft className=' text-xs flex'/> Go Back</NavLink>
