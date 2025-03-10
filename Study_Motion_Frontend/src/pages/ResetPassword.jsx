@@ -39,7 +39,7 @@ function submitHandelar(event)
 
   return (
     <div className=' flex justify-center items-center mt-10 font-inter'>
-    {loading ? <Spinner/> : <div className=' w-10/12 max-w-[300px] flex flex-col gap-4'>
+    {loading ? <Spinner/> : <div className=' w-11/12 max-w-[300px] flex flex-col gap-4'>
         {!resetComplete ? <div className=" text-white text-lg">Choose new password</div> : <div className=" text-white text-lg">Reset complete!</div>}
     
         {!resetComplete ? <p className=' text-richblack-100 text-sm'>Almost done. Enter your new password and youre all set.</p> : <p className=' text-richblack-100 text-sm'>All done! We have sent an email to m***********@gmail.com to confirm</p>}   

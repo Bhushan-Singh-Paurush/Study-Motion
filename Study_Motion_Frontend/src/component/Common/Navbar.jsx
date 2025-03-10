@@ -59,7 +59,7 @@ useEffect(()=>{
                             <NavLink  onClick={()=>setIsOpen(!isOpen)} to={`${item.path}`}>
                                 <p className={`${matchRoute(item.path) ? " text-yellow-100" : " text-richblack-100"}`}>{item.title}</p>
                             </NavLink>
-                        ) : (<div className='z-20 hover:cursor-pointer relative group text-richblack-100'>
+                        ) : (<div className=' select-none z-20 hover:cursor-pointer relative group text-richblack-100'>
                         {item.title}
                         
                         <div className='text-black scale-0 transition-all duration-300 group-hover:scale-100 relative z-10'>

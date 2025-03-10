@@ -22,7 +22,7 @@ export const Sidebar = () => {
   }
   
   return (
-    <div className=" bg-richblack-800 md:w-[15%]">
+    <div className=" bg-richblack-800 w-[30%] md:w-[15%]">
       <div className=" flex flex-col w-full py-6">
         {sidebarLinks.map((item) => {
           let Icon = Icon1[item?.icon];

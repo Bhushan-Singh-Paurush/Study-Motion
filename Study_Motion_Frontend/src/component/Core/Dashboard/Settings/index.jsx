@@ -7,7 +7,7 @@ import { DeleteAccount } from './DeleteAccount'
 export const Settings = () => {
   return (
     <div className='w-full h-full flex flex-col my-10 items-center gap-10'>
-        <div className='w-[90%] place-content-start font-inter text-xl'>Edit Profile</div>
+        <div className='w-11/12 md:w-[80%] place-content-start font-inter text-xl'>Edit Profile</div>
         <ChangeProfilePicture />
         <EditProfile/>
         <ChangePassword/>

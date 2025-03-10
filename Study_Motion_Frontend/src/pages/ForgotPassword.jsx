@@ -17,8 +17,8 @@ export const ForgotPassword = () => {
     dispatch(getPasswordResetToken(email,setEmailSend))
   }
   return (
-    <div className="mt-20 flex justify-center items-center font-inter">
-      {loading ? <Spinner/> :<div className="mx-auto w-10/12 max-w-[350px]  flex flex-col gap-5 items-start">
+    <div className="mt-20 flex justify-center items-center font-inter max-h-[100vh]">
+      {loading ? <Spinner/> :<div className="mx-auto w-11/12 max-w-[350px]  flex flex-col gap-5 items-start">
         {!emailSend ? (
           <div className=" text-white text-lg">Reset your password</div>
         ) : (

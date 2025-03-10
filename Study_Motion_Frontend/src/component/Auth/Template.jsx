@@ -12,7 +12,7 @@ export const Template = ({ heading, disp1, disp2, byt, type, image }) => {
       <Spinner />
     </div>
   ) : (
-    <div className="my-20 w-10/12 max-w-[1000px] flex flex-col md:flex-col gap-10 md:gap-0 justify-between mx-auto">
+    <div className="my-20 w-10/12 max-w-[1000px] flex flex-col md:flex-row gap-10 md:gap-0 justify-between mx-auto">
       {/* left section */}
       <div className="flex flex-col gap-4 w-full md:w-[40%]">
         <h1 className=" text-white text-4xl font-semibold">{heading}</h1>

@@ -23,7 +23,7 @@ exports.resetPasswordToken=async(req,res)=>{
             resetPasswordExpiers:Date.now() + 5*60*1000
         })
 
-        const url=`http://localhost:5173/reset-password/${token}`
+        const url=`${process.env.CLIENT_URL}/reset-password/${token}`
 
         await mailSender(email , "Password reset Link" ,`Click on this link to Reset the Password ${url}`)
 
