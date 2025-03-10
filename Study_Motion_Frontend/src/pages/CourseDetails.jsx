@@ -19,7 +19,7 @@ export const CourseDetails = () => {
     const courseId=useParams()
     const[confirmationModal,setConfirmationModal]=useState()
     const[course,setCourse]=useState()
-
+    const{token}=useSelector((state)=>state.auth)
     useEffect(()=>{
         ;(async()=>{
             const result = await getFullDetailsOfCourse(courseId)    

@@ -91,7 +91,7 @@ export const CourseBuilderForm = () => {
        }
 
     return (
-    <div className=' bg-richblack-800 p-8'>
+    <div className=' bg-richblack-800 p-4 md:p-8'>
         <div className=' flex flex-col gap-6'>
           <h1>Course Builder</h1>
           <form className=' flex flex-col gap-4' onSubmit={handleSubmit(submit)}>

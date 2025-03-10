@@ -149,7 +149,7 @@ export const CourseInformationForm = () => {
         dispatch(setsteps(2))
     } 
     return (
-    <div className=' bg-richblack-800 p-8'>
+    <div className=' bg-richblack-800 p-4 md:p-8'>
         <form className=' flex flex-col gap-4' onSubmit={handleSubmit(data => onSubmit(data))}>
             <label className=' flex flex-col gap-1'>
                 <div>Course Title<sup className="text-pink-500">*</sup></div>

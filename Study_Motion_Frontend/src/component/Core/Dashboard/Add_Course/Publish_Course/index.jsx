@@ -53,7 +53,7 @@ export const PublishCourse = () => {
         }
   }
   return (
-    <div className=' bg-richblack-800 p-8 font-inter'>
+    <div className=' bg-richblack-800 p-4 md:p-8 font-inter'>
         <div className=' flex flex-col gap-6'>
         Publish Settings
         <form onSubmit={handleSubmit((data)=>Submit(data))} className=' flex flex-col gap-5'>

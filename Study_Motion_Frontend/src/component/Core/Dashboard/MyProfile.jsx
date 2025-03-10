@@ -11,7 +11,7 @@ export const MyProfile = () => {
       {/* section A */}
       <div className=' w-11/12 md:w-[80%] bg-richblack-800 rounded-sm p-2 md:p-8 border-richblack-700 border-[1px] flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start'>
         <div className=' flex gap-2 md:gap-4 items-center'>
-          <img src={user.image} className='w-10 md:w-16 rounded-full'/>
+          <img src={user.image} className='w-10 md:w-16 aspect-square rounded-full'/>
           <div className=' text-sm text-richblack-100'>
             <div className=' text-white font-semibold'>{user.firstname}{" "}{user?.lastname}</div>
             <div>{user.email}</div>
