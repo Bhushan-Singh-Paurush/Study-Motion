@@ -184,7 +184,9 @@ exports.login=async(req,res)=>{
             }
             const option={
                 maxAge:2*24*60*60*1000,
-                httpOnly:true
+                httpOnly:true,
+                secure:true,
+                sameSite:'none'
             }
             user.password=undefined
             const token = jwt.sign(payload,process.env.SECRET,{expiresIn:'2d'})

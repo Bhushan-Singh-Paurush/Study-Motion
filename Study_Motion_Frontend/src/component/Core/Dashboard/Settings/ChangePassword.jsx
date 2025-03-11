@@ -9,9 +9,9 @@ export const ChangePassword = () => {
   const[showpass1,setShowpass1]=useState(false)
   const[showpass2,setShowpass2]=useState(false)
   const[showpass3,setShowpass3]=useState(false)
-  const{token}=useSelector((state)=>state.profile)
+  const{token}=useSelector((state)=>state.auth)
   const[upload,setUpload]=useState("Upload")
-
+  
   function changehandelar(event){
     setForm((pre)=>({...pre,[event.target.name]:event.target.value}))
   }
