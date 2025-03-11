@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { deleteProfile } from '../../../../services/Operation/SettingsApi';
 
 export const DeleteAccount = () => {
-  const{token}=useSelector((state)=>state.profile)
+  const{token}=useSelector((state)=>state.auth)
   const navigate=useNavigate()
   const dispatch=useDispatch()
   function Handelar(){

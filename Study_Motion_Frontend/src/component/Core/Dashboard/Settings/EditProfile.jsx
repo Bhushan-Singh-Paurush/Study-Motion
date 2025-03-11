@@ -13,7 +13,7 @@ export const EditProfile = () => {
   const{user}=useSelector((state)=>state.profile)
   const[dateOfBirth,setDateofBirth]=useState()
   const dispatch=useDispatch()
-  const{token}=useSelector((state)=>state.profile)
+  const{token}=useSelector((state)=>state.auth)
   const[upload,setUpload]=useState("Upload")
   useEffect(() => {
 
