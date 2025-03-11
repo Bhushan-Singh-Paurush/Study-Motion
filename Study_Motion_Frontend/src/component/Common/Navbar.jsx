@@ -32,7 +32,9 @@ const getCategory =async()=>{
     }
 }
 function matchRoute(path){
+    
     return matchPath(path,location.pathname)
+   
 }
 
 function logoutHandelar(){
@@ -41,8 +43,10 @@ function logoutHandelar(){
 }
 
 useEffect(()=>{
+    
     getCategory()
 },[])
+
 
 
   return (
@@ -87,7 +91,7 @@ useEffect(()=>{
                  <NavLink to={"/dashboard/cart"} className="relative">
                  <div className={`text-xl ${matchRoute("/dashboard/cart") ? "text-yellow-100" : "text-richblack-100"}`}><MdOutlineShoppingCart />
                  
-                 {totalItems.length >0 && <span className=' absolute'>{totalItems.length}</span>}
+                 {totalItems>0 && <span className=' absolute -bottom-[5px] -right-[5px] text-richblack-100 bg-richblack-800 text-xs w-[15px] flex items-center justify-center aspect-square rounded-full'>{totalItems}</span>}
                  </div>
                  </NavLink>}
                  <div className='flex items-center gap-2 relative'>
