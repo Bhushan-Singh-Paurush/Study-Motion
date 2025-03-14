@@ -183,7 +183,7 @@ exports.login=async(req,res)=>{
                 role:user.accountType
             }
             const option={
-                maxAge:2*24*60*60*1000,
+                expires:new Date(Date.now() + 2*24*60*60*1000),
                 httpOnly:true,
                 secure:true,
                 sameSite:'none'
