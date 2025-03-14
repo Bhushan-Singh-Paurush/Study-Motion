@@ -20,7 +20,7 @@ const fs=require("fs")
 const port=process.env.PORT || 5000
 
 app.use(cors({
-    origin:"https://study-motion-two.vercel.app",
+    origin:process.env.CLIENT_URL,
     credentials:true
 }))
 
