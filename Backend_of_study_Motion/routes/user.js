@@ -1,7 +1,7 @@
 const express = require("express")
 const Router = express.Router()
 
-const {sendOTP,signUp,login,changePassword} = require("../Controller/Auth")
+const {sendOTP,signUp,login,changePassword, googleLogin} = require("../Controller/Auth")
 
 const {auth} = require("../Middleware/auth")
 
@@ -21,7 +21,8 @@ Router.post("/signUp",signUp)
 //change password 
 Router.post("/changePassword",auth,changePassword)
 
-
+//Google Login
+Router.get("/googleLogin",googleLogin)
 
 
 module.exports=Router

@@ -11,7 +11,8 @@ export const auth={
         CHANGEPASS:base_url+"/profile/resetPassword",
         SENDOTP:base_url+"/auth/sendOTP",
         SIGNUP:base_url+"/auth/signUp",
-        LOGIN:base_url+"/auth/login"
+        LOGIN:base_url+"/auth/login",
+        GOOGLELOGIN:base_url+"/auth/googleLogin"
         
 }
 

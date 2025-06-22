@@ -141,3 +141,35 @@ export function logout(navigate){
         navigate("/")
     }
 }
+
+export function googleLogin(credential,navigate){
+    return async(dispatch)=>{
+          dispatch(setLoaing(true))
+          try {
+            const response = await apiConnector("GET",auth.GOOGLELOGIN,{},{},
+                {token:credential}
+            )
+            
+            if(!response.data.success)
+            {
+                throw new Error(response.data.message)
+            }
+
+            dispatch(setToken(response.data.token))
+            response.data.user.image=response.data.user.image || 
+            `https://ui-avatars.com/api/?background=random&name=${response.data?.user?.firstname}+${response.data?.user?.lastname}`
+            
+            dispatch(setUser({...response.data.user}))
+            
+            localStorage.setItem("token",JSON.stringify(response.data.token))
+            localStorage.setItem("user",JSON.stringify(response.data.user))
+
+            toast.success(response.data.message)
+            navigate("/") 
+
+          } catch (error) {
+               toast.error(error.response.data.message)
+          }
+          dispatch(setLoaing(false))
+    }
+}

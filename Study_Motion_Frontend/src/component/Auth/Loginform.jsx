@@ -3,8 +3,8 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import { login } from "../../services/Operation/authApi";
-
+import { googleLogin, login } from "../../services/Operation/authApi";
+import {GoogleLogin} from "@react-oauth/google"
 
 export const Loginform = ({ byt }) => {
   const [showpass, setShowpass] = useState(false);
@@ -21,6 +21,10 @@ export const Loginform = ({ byt }) => {
   function handelar(event) {
     event.preventDefault();
     dispatch(login(form.email,form.password,navigate))
+  }
+  function handleLoginByGoogle(credentialResponse){
+    dispatch(googleLogin(credentialResponse.credential,navigate))
+              
   }
   return (
     <div>
@@ -68,7 +72,10 @@ export const Loginform = ({ byt }) => {
         <button className="py-1  w-full bg-yellow-100 border-yellow-5 border-b-2 border-r-2 text-lg rounded-lg">
           {byt}
         </button>
+        <GoogleLogin onSuccess={handleLoginByGoogle} onError={()=>{console.log("Google login failed")}}/>
       </form>
+      
+      
     </div>
   );
 };
